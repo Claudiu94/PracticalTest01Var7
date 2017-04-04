@@ -1,5 +1,6 @@
 package ro.pub.cs.systems.eim.practicaltest01Var07;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class PracticalTest01Var07SecondaryActivity extends AppCompatActivity {
+public class PracticalTest01Var07SecondaryActivity extends Activity {
 
     private TextView sum = null;
     private TextView resultSum = null;
@@ -38,7 +39,7 @@ public class PracticalTest01Var07SecondaryActivity extends AppCompatActivity {
             String result = intent.getStringExtra("nonEditableContent");
 
             int suma = 0;
-            String res[] = result.toString().split("+");
+            String res[] = result.split("+");
             for(String s : res) {
                 suma += Integer.valueOf(s);
             }
